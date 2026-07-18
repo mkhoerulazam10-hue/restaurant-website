@@ -1,84 +1,387 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restoran Nusantara</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restoran Lezat - Nikmati Pengalaman Kuliner Terbaik dengan Menu Autentik">
+    <meta name="theme-color" content="#2c3e50">
+    <title>Restoran Lezat - Cita Rasa Autentik Indonesia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-
-<header>
-    <h1>Restoran Nusantara</h1>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">Tentang</a>
-        <a href="#contact">Kontak</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Restoran Lezat</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#spesial">Spesial</a></li>
+                    <li><a href="#reservasi">Reservasi</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </nav>
-</header>
 
-<section class="hero">
-    <h2>Makanan Tradisional Indonesia</h2>
-    <p>Lezat • Murah • Berkualitas</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Selamat Datang di Restoran Lezat</h1>
+            <p>Nikmati Pengalaman Kuliner Autentik dengan Cita Rasa yang Tak Terlupakan</p>
+            <button class="btn btn-primary" id="btnMenu">
+                Jelajahi Menu <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
 
-    <button onclick="pesan()">Pesan Sekarang</button>
-</section>
+    <!-- Quick Info Section -->
+    <section class="quick-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Jam Buka</h3>
+                        <p>Senin - Jumat: 10:00 - 22:00</p>
+                        <p>Sabtu - Minggu: 11:00 - 23:00</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Hubungi Kami</h3>
+                        <p>+62 21 1234 5678</p>
+                        <p>+62 812 3456 7890</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Lokasi</h3>
+                        <p>Jl. Kuliner Raya No. 123</p>
+                        <p>Jakarta Selatan, 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="menu">
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Menu Pilihan Kami</h2>
+            <p class="section-subtitle">Berbagai pilihan hidangan lezat yang siap memanjakan lidah Anda</p>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">Semua Menu</button>
+                <button class="filter-btn" data-filter="makanan">Makanan</button>
+                <button class="filter-btn" data-filter="minuman">Minuman</button>
+                <button class="filter-btn" data-filter="dessert">Dessert</button>
+            </div>
 
-<h2>Menu Favorit</h2>
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items ditampilkan oleh JavaScript -->
+            </div>
+        </div>
+    </section>
 
-<div class="card">
+    <!-- About Section -->
+    <section class="about" id="tentang">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Restoran Lezat Interior">
+                </div>
+                <div class="about-text">
+                    <h2>Tentang Restoran Lezat</h2>
+                    <p>Restoran Lezat adalah destinasi kuliner pilihan yang telah melayani pelanggan setia sejak tahun 2015. Kami berkomitmen untuk menghadirkan pengalaman bersantap yang tak terlupakan dengan menyajikan hidangan berkualitas premium.</p>
+                    
+                    <p>Dengan tim chef profesional yang berpengalaman lebih dari 15 tahun di industri kuliner, kami menciptakan setiap hidangan dengan perhatian terhadap detail dan cinta pada seni memasak.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Bahan Premium</h3>
+                            <p>Bahan berkualitas tinggi</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h3>Chef Profesional</h3>
+                            <p>Tim berpengalaman 15+ tahun</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h3>Layanan Terbaik</h3>
+                            <p>Kepuasan pelanggan adalah prioritas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="item">
-<h3>Nasi Goreng</h3>
-<p>Rp25.000</p>
-</div>
+    <!-- Special Offers Section -->
+    <section class="spesial" id="spesial">
+        <div class="container">
+            <h2 class="section-title">Penawaran Spesial</h2>
+            <p class="section-subtitle">Manjakan diri Anda dengan hidangan pilihan eksklusif kami</p>
+            
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <div class="promo-badge">Diskon 20%</div>
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Paket Hemat">
+                    <div class="promo-content">
+                        <h3>Paket Hemat Keluarga</h3>
+                        <p>Nikmati berbagai hidangan untuk 4 orang dengan harga spesial</p>
+                        <div class="promo-price">
+                            <span class="price-old">Rp 200.000</span>
+                            <span class="price-new">Rp 160.000</span>
+                        </div>
+                    </div>
+                </div>
 
-<div class="item">
-<h3>Sate Ayam</h3>
-<p>Rp30.000</p>
-</div>
+                <div class="promo-card">
+                    <div class="promo-badge">Baru</div>
+                    <img src="https://images.unsplash.com/photo-1565958011504-98d6b200a366?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Menu Baru">
+                    <div class="promo-content">
+                        <h3>Menu Signature Terbaru</h3>
+                        <p>Cicipi kreasi terbaru chef kami: Fusion Kuliner Asia</p>
+                        <div class="promo-price">
+                            <span class="price-new">Rp 85.000</span>
+                        </div>
+                    </div>
+                </div>
 
-<div class="item">
-<h3>Mie Goreng</h3>
-<p>Rp22.000</p>
-</div>
+                <div class="promo-card">
+                    <div class="promo-badge">Favorit</div>
+                    <img src="https://images.unsplash.com/photo-1586190203519-2fc2d8c517fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Hidangan Favorit">
+                    <div class="promo-content">
+                        <h3>Rendang Daging Premium</h3>
+                        <p>Hidangan andalan kami dengan resep turun temurun</p>
+                        <div class="promo-price">
+                            <span class="price-new">Rp 45.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- Testimoni Section -->
+    <section class="testimoni">
+        <div class="container">
+            <h2 class="section-title">Testimoni Pelanggan</h2>
+            <p class="section-subtitle">Kepuasan pelanggan adalah kebanggaan terbesar kami</p>
+            
+            <div class="testimoni-grid">
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=60" alt="Pelanggan">
+                        <div class="testimoni-info">
+                            <h4>Budi Santoso</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">Makanannya sangat lezat dan porsinya besar. Pelayanannya ramah dan cepat.</p>
+                </div>
 
-</section>
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=60" alt="Pelanggan">
+                        <div class="testimoni-info">
+                            <h4>Siti Nurhaliza</h4>
+                            <p>Bandung</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">Suasana restoran sangat nyaman dan tenang. Cocok untuk acara spesial.</p>
+                </div>
 
-<section id="about">
-<h2>Tentang Kami</h2>
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=60" alt="Pelanggan">
+                        <div class="testimoni-info">
+                            <h4>Ahmad Wijaya</h4>
+                            <p>Surabaya</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">Kualitas makanan premium dengan harga yang sangat terjangkau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p>
-Restoran Nusantara menyediakan berbagai makanan khas Indonesia dengan cita rasa terbaik.
-</p>
+    <!-- Reservation Section -->
+    <section class="reservasi" id="reservasi">
+        <div class="container">
+            <h2 class="section-title">Pesan Meja Anda</h2>
+            <p class="section-subtitle">Reservasi sekarang untuk pengalaman bersantap yang lebih nyaman</p>
+            
+            <form class="reservation-form" id="reservationForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
 
-</section>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                </div>
 
-<section id="contact">
+                <div class="form-group">
+                    <label for="telepon">Nomor Telepon</label>
+                    <input type="tel" id="telepon" name="telepon" placeholder="+62 812 3456 7890" required>
+                </div>
 
-<h2>Kontak</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal</label>
+                        <input type="date" id="tanggal" name="tanggal" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="waktu">Waktu</label>
+                        <input type="time" id="waktu" name="waktu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jumlah">Jumlah Orang</label>
+                        <input type="number" id="jumlah" name="jumlah" min="1" max="20" placeholder="1" required>
+                    </div>
+                </div>
 
-<p>Whatsapp : 0812-3456-7890</p>
+                <div class="form-group">
+                    <label for="catatan">Catatan Khusus (Opsional)</label>
+                    <textarea id="catatan" name="catatan" rows="4" placeholder="Tulis catatan khusus Anda di sini"></textarea>
+                </div>
 
-<p>Email : restoran@email.com</p>
+                <button type="submit" class="btn btn-primary">Konfirmasi Reservasi</button>
+            </form>
+        </div>
+    </section>
 
-</section>
+    <!-- Contact Section -->
+    <section class="kontak" id="kontak">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <p class="section-subtitle">Kami siap melayani Anda dengan sepenuh hati</p>
+            
+            <div class="kontak-grid">
+                <div class="kontak-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Alamat</h3>
+                    <p>Jl. Kuliner Raya No. 123</p>
+                    <p>Jakarta Selatan, 12345</p>
+                </div>
 
-<footer>
+                <div class="kontak-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telepon</h3>
+                    <p>+62 21 1234 5678</p>
+                    <p>+62 812 3456 7890</p>
+                </div>
 
-<p>© 2026 Restoran Nusantara</p>
+                <div class="kontak-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@restorlezat.com</p>
+                    <p>reservasi@restorlezat.com</p>
+                </div>
 
-</footer>
+                <div class="kontak-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Jam Operasional</h3>
+                    <p><strong>Senin - Jumat:</strong> 10:00 - 22:00</p>
+                    <p><strong>Sabtu - Minggu:</strong> 11:00 - 23:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Restoran Lezat</h3>
+                    <p>Restoran kami berkomitmen untuk memberikan pengalaman kuliner terbaik dengan kualitas premium.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
 
+                <div class="footer-section">
+                    <h3>Navigasi Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#reservasi">Reservasi</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Informasi</h3>
+                    <ul>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Karir</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restoran Lezat. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
